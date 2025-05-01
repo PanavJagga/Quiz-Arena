@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&family=Silkscreen&display=swap');
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div id="start-screen">
+      <h2>🎮 Welcome to the Quiz Arena 🎮</h2>
+      <label>Category:
+        <select id="category">
+          <option value="general">General Knowledge</option>
+          <option value="tech">Technology</option>
+        </select>
+      </label>
+      <br /><br />
+      <label>Difficulty:
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <br /><br />
+      <button onclick="startQuiz()">🚀 Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+      <div class="info">
+        ⏳ Time Left: <span id="timer">30</span> seconds
+      </div>
+      <div id="question" class="question"></div>
+      <div id="options" class="options"></div>
+      <button onclick="nextQuestion()">➡️ Next</button>
+    </div>
+
+    <div id="result-screen" class="hidden">
+      <h3>🎉 Quiz Completed! 🎉</h3>
+      <div id="summary" class="summary"></div>
+      <button onclick="location.reload()">🔄 Try Again</button>
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+    
+</body>
+</html>
